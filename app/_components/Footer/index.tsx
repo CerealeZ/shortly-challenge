@@ -102,8 +102,8 @@ const Desktop = () => {
           <Logo />
         </div>
 
-        <div className="flex gap-16">
-          <ul className="text-center flex gap-20">
+        <div className="flex gap-16 justify-between w-2/3">
+          <ul className="flex gap-16">
             <li>
               <span className="font-bold">Features</span>
               <ul className="mt-4 flex flex-col gap-2">
@@ -149,7 +149,7 @@ const Desktop = () => {
             </li>
           </ul>
 
-          <ul className="flex gap-6">
+          <ul className="flex gap-6 flex-wrap">
             <li>
               <a
                 href="https://www.facebook.com"
