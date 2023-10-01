@@ -12,7 +12,7 @@ export const CardsInfo = {
   },
 
   FULLY_CUSTOMIZABLE: {
-    title: "Fully Costomizable",
+    title: "Fully Customizable",
     description:
       "Improve brand awareness and content discoverability through customizable links, supercharging audience engagement",
   },
