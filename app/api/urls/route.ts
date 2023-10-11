@@ -9,12 +9,16 @@ export const GET = async (request: Request) => {
   }
 
   url.searchParams.append("url", search)
-  const { result, ok } = await (await fetch(url.href)).json()
-  return NextResponse.json(
-    {
-      url: result?.full_short_link ?? null,
-      original: result?.original_link ?? null,
-    },
-    { status: ok ? 200 : 400 }
-  )
+  try {
+    const { result, ok } = await (await fetch(url.href)).json()
+    return NextResponse.json(
+      {
+        url: result?.full_short_link ?? null,
+        original: result?.original_link ?? null,
+      },
+      { status: ok ? 200 : 400 }
+    )
+  } catch {
+    return NextResponse.json({ url: null }, { status: 500 })
+  }
 }
